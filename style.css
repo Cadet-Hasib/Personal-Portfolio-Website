@@ -169,7 +169,9 @@ a {
 
 #header .logo {
     color: #f5f5f5;
-    font-size: 25px;
+    font-size: 30px;
+    font-weight: 200;
+    font-family: "Lobster", cursive;
 }
 
 .nav-bar ul li a {
@@ -427,10 +429,6 @@ img {
 
 /**  Projects Section Start */
 
-#projects .projects-header .section-title span {
-    color: crimson;
-}
-
 #projects .projects-header .section-title {
     text-transform: uppercase;
 }
@@ -445,14 +443,31 @@ img {
     text-align: center;
 }
 
+#projects .projects-header .section-title span {
+    color: crimson;
+}
+
+#projects .projects-header .section_options {
+    display: flex;
+}
+
+#projects .projects-header .section_options h3 {
+    margin-left: 35px;
+    margin-right: 35px;
+    background-color: #2c79e4;
+    color: #f5f5f5;
+    padding: 5px 30px;
+}
+
 #projects .projects .projects-grid {
-    width: 90vw;
+    width: 95vw;
     max-width: 1170px;
     margin: 0 auto 2rem;
     display: grid;
-    grid-gap: 3rem 1.5rem;
-    gap: 3rem 1.5rem;
+    grid-gap: 3rem 3rem;
+    gap: 3rem 3rem;
     grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    margin-top: 30px;
 }
 
 #projects .projects {
@@ -462,17 +477,69 @@ img {
     padding: 100px 0;
 }
 
-#projects .projects .projects-header {
-    margin-bottom: 50px;
-}
-
 #projects .projects .all-projects {
-    background-color: yellow;
+    background-color: #e7eaec;
+    border-radius: 7px;
+    box-shadow: -2px -5px 7px -5px rgb(61, 61, 61);
+    transition: all 0.5s ease;
 }
 
-#projects .projects .all-projects img {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+#projects .projects .all-projects:hover {
+    transform: scale(1.05);
+}
+
+#projects .projects .all-projects .project-img img {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+#projects .projects .all-projects .project-info {
+    padding: 0px 0;
+}
+
+#projects .projects .all-projects .project-info h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 30px 0;
+    letter-spacing: 0.1rem;
+}
+
+#projects .projects .all-projects .project-info p {
+    font-size: 13px;
+}
+
+#projects .projects .all-projects .project-info .tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#projects .projects .all-projects .project-info .tag p {
+    background-color: #4f96fa;
+    margin: 10px;
+    color: #f5f5f5;
+    padding: 5px 20px;
+    border-radius: 15px;
+    user-select: none;
+}
+
+#projects .projects .all-projects .project-info .codes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f5f5f5;
+    padding: 0.75rem 5rem;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+#projects .projects .all-projects .project-info .codes .github_logo img {
+    width: 32px;
+}
+
+#projects .projects .all-projects .project-info .codes .source_code a {
+    color: #0048ac;
+    font-size: 15px;
 }
 
 /**  Projects Section End */
@@ -591,6 +658,8 @@ footer h2 {
     text-align: center;
     margin-bottom: 60px;
     margin-top: 50px;
+    font-family: "Lobster", cursive;
+    font-weight: 100;
 }
 
 footer p {
